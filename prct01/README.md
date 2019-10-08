@@ -15,3 +15,4 @@ En el punto de iluminación solo tuvimos que añadir un punto de luz más, ya qu
 Por último, añadimos un pequeño lago en el interior de las montañas, el cual se encontraba en el repositorio de _Standard Assets_, y para generar los árboles nos descargamos un nuevo paquete llamado _Low Poly Tree Pack_ de donde generamos los árboles y les añadimos texturas en armonía con la zona más húmeda del plano.
 
 **Imagen de la Práctica 1**
+![](prct01/Img/prct01.gif)
