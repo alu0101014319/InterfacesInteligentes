@@ -13,3 +13,5 @@ A continuación, el punto que realizamos es el de etiquetar cada objeto del proy
 En el punto de iluminación solo tuvimos que añadir un punto de luz más, ya que el proyecto ya trae una luz direccional por defecto. Dicha luz que añadimos se trata de un foco de luz(spot light), el cual colocamos justo encima del personaje de Ethan para destacar su presencia.
 
 Por último, añadimos un pequeño lago en el interior de las montañas, el cual se encontraba en el repositorio de _Standard Assets_, y para generar los árboles nos descargamos un nuevo paquete llamado _Low Poly Tree Pack_ de donde generamos los árboles y les añadimos texturas en armonía con la zona más húmeda del plano.
+
+**Imagen de la Práctica 1**
