@@ -69,4 +69,4 @@ La segunda diferencia tiene relación con la función que utiliza _transform_, e
 
 **Gif de la práctica**
 
-![Gif](prct02/Img/ezgif.com-video-to-gif.gif)
+![Gif](Img/prct02.gif)
