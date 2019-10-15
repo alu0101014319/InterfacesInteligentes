@@ -67,3 +67,6 @@ Por otro lado, para realizar la rotación seguiremos el mismo procedimiento exce
 La primera de ellas la podemos observar que a parte de pulsar la tecla de dirección antes configurada, también el usuario debe pulsar la tecla Shift para que así el programa diferencie entre la traslación y la rotación utilizando prácticamente las mismas teclas.
 La segunda diferencia tiene relación con la función que utiliza _transform_, en este caso hemos utilizado la función _RotateAround_ cuyos parámetros son la posición actual del objeto, el objeto _Vector3_ que vaya a modificar el eje correspondiente para realizar el giro sobre el eje OY, y por último la velocidad de giro que establecimos con anterioridad. 
 
+**Gif de la práctica**
+
+![Gif](prct02/Img/ezgif.com-video-to-gif.gif)
