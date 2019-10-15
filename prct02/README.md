@@ -6,9 +6,9 @@ En primer lugar, generamos dos objetos en el plano: un terreno y un cubo 3D. Una
 
 _Contenido del Script TranslationRotation_:
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
     public class TranslationRotation : MonoBehaviour
     {
