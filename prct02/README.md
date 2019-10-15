@@ -60,6 +60,7 @@ Lo primero que declaramos son dos variables, las cuales las utilizaremos para es
 
 Tras establecer los valores que creamos adecuados pasamos a la función _Update()_ para que se esté ejecutando constantemente. En este área codificaremos la traslación y la rotación del objeto cuando el usuario presione las teclas habilitadas para ello.
 La función _Input_ junto con la función _GetKey_ permite al programa estar a la escucha para ver si el usuario presione la tecla que hemos especificado en la función _GetKey_. En nuestro caso hemos codificado las teclas A, S, W, D para manejar el desplazamiento del cubo. 
+
 Una vez el usuario presione esas teclas, se ejecutará la orden que está dentro del _If_. El cubo consigue desplazarse gracias al _transform_, ya que manipula las coordenadas de los ejes x, y y z. Añadiéndole la función _Translate_ para que realice el dezplazamiento, debemos utilizar el objeto _Vector3_ junto con su dirección (forward, back, left, right) para que solo modifique el eje correspondiente con su movimiento. Dicho objeto debe multiplicarse por la velocidad que establecimos al principio del script y por otra nueva variable, _Time.deltaTime_, la cual va a escalar el tamaño del movimiento por el frame time que nuestra CPU sea capaz de procesar para que parezca que el objeto se mueve a una velocidad regular. Una vez configurado esto, el desplazamiento del cubo ya estaría terminado.
 
 Por otro lado, para realizar la rotación seguiremos el mismo procedimiento excepto por dos diferencias.
