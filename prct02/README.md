@@ -46,12 +46,12 @@ _Contenido del Script TranslationRotation_:
             //Rotation
             if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
             {
-                this.transform.RotateAround(transform.position, Vector3.up, rotationSpeed);
+                this.transform.RotateAround(transform.position, Vector3.down, rotationSpeed);
             }
 
             if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
             {
-                this.transform.RotateAround(transform.position, Vector3.down, rotationSpeed);
+                this.transform.RotateAround(transform.position, Vector3.up, rotationSpeed);
             }
         }
     }
