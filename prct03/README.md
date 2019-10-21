@@ -3,7 +3,7 @@
 Para llevar a cabo esta práctica, la cual consta de tres apartados, hemos decidido generar un entorno que cuenta con un terreno limitado por objetos 3D que hacen la función de muro. De esta manera, los objetos que estén dentro del terreno desplazándose no se podrán salir en ningún momento.
 Una vez tenemos nuestro entorno creado podemos dar paso a comenzar la práctica, la cual hemos dividido en tres apartados:
 
-**Player**
+# Player
 
 En este apartado se nos describe que el comportamiento del objeto Jugador debe poder detectar las colisiones que tenga con las Esferas que estén dentro de nuestro entorno para poder generar un contador de dichas colisiones. Además, debemos implementar el script correspondiente para que dicho objeto Jugador pueda desplazarse, mediante _Físicas_, con las teclas I, J, L y M en las distintas direcciones.
 
@@ -76,7 +76,7 @@ Para terminar este apartado, el contador que hemos generado lo podremos visualiz
 Por último, en la función _Start()_, añadimos una línea para cambiar el color de nuestro objeto Jugador a azul, para que se diferencie del resto de nuestro entorno.
 
 
-**Esferas**
+# Esferas
 
 El comportamiento de estos objetos está bastante claro, una de las esferas debe permanecer fija, y otra debe generar un movimiento aleatorio, mediante físicas, que recorra el entorno en cualquier dirección.
 Con la esfera fija, simplemente debemos fijarla en unas coordenadas y añadirle un _Rigidbody_ para que no puedan desplazarla cuando choquen con ella.
@@ -129,7 +129,7 @@ Sin embargo, con la esfera que no es estática, debemos realizar unos pasos más
 Por último, cuando termina de ejecutarse la rutina, se actualiza de nuevo el temporizador para que vuelva a repetirse el ciclo.
 
 
-**Cilindros**
+# Cilindros
 
 
 
