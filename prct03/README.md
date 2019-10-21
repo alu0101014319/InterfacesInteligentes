@@ -1,4 +1,4 @@
-**Práctica 3 - Físicas en Unity**
+# Práctica 3 - Físicas en Unity
 
 Para llevar a cabo esta práctica, la cual consta de tres apartados, hemos decidido generar un entorno que cuenta con un terreno limitado por objetos 3D que hacen la función de muro. De esta manera, los objetos que estén dentro del terreno desplazándose no se podrán salir en ningún momento.
 Una vez tenemos nuestro entorno creado podemos dar paso a comenzar la práctica, la cual hemos dividido en tres apartados:
