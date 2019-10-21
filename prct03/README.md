@@ -189,5 +189,5 @@ Finalmente, hemos utilizado la función _OnTriggerExit(Collider col)_ de modo qu
 
 # Gif de la Práctica
 
-![Gif](prct03/Img/prct03.gif)
+![Gif](Img/prct03.gif)
 
