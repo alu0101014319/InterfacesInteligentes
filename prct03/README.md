@@ -32,22 +32,22 @@ Script del objeto Jugador:
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKey(KeyCode.I))
+            if (Input.GetKey(KeyCode.W))
             {
                 rb.AddForce(Vector3.forward * moveSpeed);
             }
 
-            if (Input.GetKey(KeyCode.M))
+            if (Input.GetKey(KeyCode.S))
             {
                 rb.AddForce(Vector3.back * moveSpeed);
             }
 
-            if (Input.GetKey(KeyCode.J))
+            if (Input.GetKey(KeyCode.A))
             {
                 rb.AddForce(Vector3.left * moveSpeed);
             }
 
-            if (Input.GetKey(KeyCode.L))
+            if (Input.GetKey(KeyCode.D))
             {
                 rb.AddForce(Vector3.right * moveSpeed);
             }
@@ -67,7 +67,7 @@ Script del objeto Jugador:
         }
     }
     
-En primer lugar, para generar el movimiento del objeto Jugador mediante físicas utilizaremos la función _AddForce()_. Para ello, primero debemos proporcionarle un _Rigidbody_ al objeto desde la interfaz de Unity para poder manipularlo desde el script. Tras realizar ese paso, hemos generado un objeto _Rigidbody_ en el cual hemos guardado el _Rigidbody_ del objeto Jugador. A continuación, hemos generado una serie de _If_ para que el objeto se pueda mover en las diferentes direcciones dependiendo de las teclas que pulse el usuario. Por ejemplo, si el jugador pulsa la tecla I, se le aplicará una fuerza al _Rigidbody_ con la función _AddForce()_ para que en este caso avance en la dirección positiva del eje Z, mediante el uso de _Vector3.forward_ y de una variable que utilizamos como regulador de velocidad del desplazamiento, _moveSpeed_.
+En primer lugar, para generar el movimiento del objeto Jugador mediante físicas utilizaremos la función _AddForce()_. Para ello, primero debemos proporcionarle un _Rigidbody_ al objeto desde la interfaz de Unity para poder manipularlo desde el script. Tras realizar ese paso, hemos generado un objeto _Rigidbody_ en el cual hemos guardado el _Rigidbody_ del objeto Jugador. A continuación, hemos generado una serie de _If_ para que el objeto se pueda mover en las diferentes direcciones dependiendo de las teclas que pulse el usuario. Por ejemplo, si el jugador pulsa la tecla W, se le aplicará una fuerza al _Rigidbody_ con la función _AddForce()_ para que en este caso avance en la dirección positiva del eje Z, mediante el uso de _Vector3.forward_ y de una variable que utilizamos como regulador de velocidad del desplazamiento, _moveSpeed_.
 
 En segundo lugar, generaremos el contador de colisiones con las Esferas. Para ello, lo primero que debemos hacer es hacer uso de la función _OnCollisionEnter(Collision collision)_ para que el motor detecte cuándo el objeto Jugador entra en colisión con otro objeto. Para poder especificar que solo queremos que detecte cuando el jugador colisione con una esfera, debemos asignar a los objetos Esfera de nuestro entorno un "Tag" para clasificarlos y que nos sea más fácil de referenciar. Por lo tanto, cuando colisionamos con una Esfera, el objeto _Collision_ accede al _gameObject_ con el que colisionó y que nos devuelva el "tag" con el que está referenciado. Así, si dicho "tag" coincide con el que hemos especificado nosotros, incrementará una unidad en el contador. 
 
@@ -157,14 +157,14 @@ Script de comportamiento de los Cilindros:
 
             private void OnTriggerEnter(Collider col)
             {
-                if(col.gameObject.tag == "Sphere" || col.gameObject.name == "Player")
+                if(col.gameObject.tag == "Sphere" || col.gameObject.tag == "Player")
                 {
                     re.material.SetColor("_Color", Color.yellow);
                 }    
             }
             private void OnTriggerExit(Collider col)
             {
-                if (col.gameObject.tag == "Sphere" || col.gameObject.name == "Player")
+                if (col.gameObject.tag == "Sphere" || col.gameObject.tag == "Player")
                 {
                     re.material.SetColor("_Color", Color.white);
                 }
@@ -182,11 +182,15 @@ Script de comportamiento de los Cilindros:
 
 Lo primero que debemos hacer es obtener el _Renderer_ del objeto mediante la función _GetComponent<Renderer>()_, para así poder cambiar el color del objeto en las diferentes situaciones. Para ello, haremos uso de las funciones _OnCollisionStay(Collision collision)_ y de la función _OnCollisionExit(Collision collision)_. Esto significa que cuando un objeto se mantiene en colisión o sale de ella con nuestros cilindros, se cambiarán de color gracias a la función _SetColor()_.
 
-Sin embargo, para que el cilindro cambie de color cuando un objeto entre en colisión con él, utilizaremos la función _OnTriggerEnter(Collider col)_. Para que el cilindro detecte con cierta anterioridad que un objeto está cerca de él hemos generado un nuevo Collider de forma cúbica que cubra al cilindro en un área. Cuando un objeto entra en dicho Collider, el cual debe tener la opción "isTrigger" activada, el programa lo detecta pero no choca contra él, simplemente lo traspasa y cambia de color nuestro cilindro en modo de advertencia. Para identificar que los objetos que entran en colisión son las esferas o el jugador, se declara de la misma forma de antes, mediante el "tag" o de una nueva manera, con el "name" del propio objeto.
+Sin embargo, para que el cilindro cambie de color cuando un objeto entre en colisión con él, utilizaremos la función _OnTriggerEnter(Collider col)_. Para que el cilindro detecte con cierta anterioridad que un objeto está cerca de él hemos generado un nuevo Collider de forma cúbica que cubra al cilindro en un área. Cuando un objeto entra en dicho Collider, el cual debe tener la opción "isTrigger" activada, el programa lo detecta pero no choca contra él, simplemente lo traspasa y cambia de color nuestro cilindro en modo de advertencia. Para identificar que los objetos que entran en colisión son las esferas o el jugador, se declara de la misma forma de antes, mediante el "tag" o también podría ser con el "name" del propio objeto.
 
 Finalmente, hemos utilizado la función _OnTriggerExit(Collider col)_ de modo que cuando los objetos hayan salido de la colisión, el cilindro vuelva a obtener su color por defecto, en nuestro caso, el blanco.
 
+# Segundo Player
 
+En el último apartado de la práctica se nos encomienda generar un objeto que actúe de la misma manera que el objeto Jugador, pero que se desplace con las teclas I,J,L,M. Para ello, simplemente hemos copiado el objeto Jugador y le hemos incluido una copia del script que hemos visto en el primer apartado, pero cambiando las teclas de desplazamiento y el color que queremos que tenga nuestro nuevo objeto, en este caso será rojo.
+
+Por lo tanto, para el completo desarrollo de la práctica hemos programado cuatro scritps.
 # Gif de la Práctica
 
 ![Gif](Img/prct03.gif)
