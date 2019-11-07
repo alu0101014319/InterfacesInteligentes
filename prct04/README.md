@@ -306,3 +306,5 @@ Sin embargo, podemos apreciar que hemos añadido una nueva acción al evento que
 
 # Gif del Proyecto
 
+![Gif1](img/prct04-1.gif)
+![Gif2](img/prct04-2.gif)
